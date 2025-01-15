@@ -21,7 +21,7 @@ Given('a template named {string} exists', (templateName) => {
 });
 
 When('I select the card named {string}', (cardName) => {
-  cy.contains(cardName).click(); // تحديد البطاقة ديناميكيًا باستخدام اسمها
+  cy.contains(cardName).click();
 });
 
 When('I delete the card', () => {
@@ -63,7 +63,7 @@ When('I hide the template', () => {
 });
 
 Then('the card {string} should no longer exist on the board', (cardName) => {
-  cy.contains(cardName).should('not.exist'); // تأكد من أن البطاقة لم تعد موجودة
+  cy.contains(cardName).should('not.exist');
 });
 
 Then('the template {string} should exist on the board', (templateName) => {
